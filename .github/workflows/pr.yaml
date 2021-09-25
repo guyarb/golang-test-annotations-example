@@ -23,41 +23,41 @@ jobs:
 
       - name: Annotate tests
         if: always()
-        uses: guyarb/golang-test-annotations@v0.4.0
+        uses: guyarb/golang-test-annotations@modifications
         with:
           test-results: test.json
 
       - name: Special package name tests
         if: always()
-        uses: guyarb/golang-test-annotations@v0.4.0
+        uses: guyarb/golang-test-annotations@modifications
         with:
           test-results: test.json
           package-name: mytest
 
       - name: path does not exists - ignore
         if: always()
-        uses: guyarb/golang-test-annotations@v0.4.0
+        uses: guyarb/golang-test-annotations@modifications
         with:
           test-results: does-not-exist.json
           if-no-files-found: ignore
 
       - name: path does not exists - warn
         if: always()
-        uses: guyarb/golang-test-annotations@v0.4.0
+        uses: guyarb/golang-test-annotations@modifications
         with:
           test-results: does-not-exist.json
           if-no-files-found: warn
 
       - name: path does not exists - invalid command
         if: always()
-        uses: guyarb/golang-test-annotations@v0.4.0
+        uses: guyarb/golang-test-annotations@modifications
         with:
           test-results: does-not-exist.json
           if-no-files-found: bla
 
       - name: path does not exists - error
         if: always()
-        uses: guyarb/golang-test-annotations@v0.4.0
+        uses: guyarb/golang-test-annotations@modifications
         with:
           test-results: does-not-exist.json
           if-no-files-found: error
