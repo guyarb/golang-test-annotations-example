@@ -1,4 +1,4 @@
-module github.com/guyarb/example
+module rand111
 
 go 1.14
 

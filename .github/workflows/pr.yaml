@@ -27,6 +27,13 @@ jobs:
         with:
           test-results: test.json
 
+      - name: Annotate tests
+        if: always()
+        uses: guyarb/golang-test-annotations@modifications
+        with:
+          test-results: test.json
+          package-name: rand111
+
       - uses: actions/upload-artifact@v2
         if: always()
         with:
