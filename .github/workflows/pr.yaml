@@ -21,11 +21,6 @@ jobs:
       - name: run tests
         run: go test -json ./... > test.json
 
-      - name: Annotate tests
-        if: always()
-        uses: guyarb/golang-test-annotations@modifications
-        with:
-          test-results: test.json
 
       - name: Annotate tests
         if: always()
